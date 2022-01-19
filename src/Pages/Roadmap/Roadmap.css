@@ -2,12 +2,29 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 70%;
-  background-color: #1a1a1d;
+  width: 80%;
+  background-color: #0b0c10;
   color: white;
   flex-direction: column;
   padding: 2rem 0rem;
+  position: relative;
   gap: 2rem;
+}
+.roadmap::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: grey;
+  bottom: 0%;
+}
+.roadmap::before {
+  content: "";
+  position: absolute;
+  width: 85vw;
+  height: 2px;
+  background-color: grey;
+  top: 0%;
 }
 .roadmap h1 {
   color: #c3073f;
@@ -19,8 +36,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  gap: 2rem;
+  align-items: center;
+  gap: 10px;
+  margin-left: 19rem;
 }
 .gif-road {
   position: absolute;
@@ -39,30 +57,37 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  font-size: 1.4rem;
-  color: #4e4e50;
-}
-.milestone:nth-child(1) p:nth-child(1) {
-  margin-right: 1rem;
-}
-.milestone:last-child p:nth-child(1) {
-  margin-right: 4rem;
+  font-size: 1.2rem;
+  color: white;
+  width: 90%;
 }
 .milestone p:nth-child(1) {
+  flex: 0.3;
+}
+.milestone p:nth-child(2) {
+  flex: 0.7;
+  color: white;
+}
+
+.milestone p:nth-child(1) {
   color: #c3073f;
-  margin-right: 5rem;
 }
 .middle {
   font-size: 1.4rem;
-  color: #4e4e50;
-  margin: 2rem 0rem;
+  color: white;
+  width: 90%;
 }
 @media screen and (max-width: 1520px) {
   .roadmap {
-    width: 90%;
+    width: 80%;
   }
   .roadmap_div {
-    width: 70%;
+    width: 80%;
+  }
+}
+@media screen and (max-width: 927px) {
+  .roadmap_div {
+    margin-left: 0rem;
   }
 }
 @media screen and (max-width: 852px) {
@@ -98,7 +123,9 @@
   .milestone {
     font-size: 1.1rem;
   }
-  .milestone p:nth-child(1) {
-    margin-right: 2rem;
+}
+@media screen and (max-width: 445px) {
+  .milestone {
+    gap: 15px;
   }
 }

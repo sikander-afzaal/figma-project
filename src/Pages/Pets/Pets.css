@@ -1,0 +1,153 @@
+.pets {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 80%;
+  flex-direction: column;
+  height: auto;
+  padding: 4rem 0rem;
+  gap: 2rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+.pets::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  bottom: 0%;
+}
+.pets h1 {
+  color: white;
+  font-size: 2.5rem;
+}
+.desc-pets {
+  color: white;
+  font-size: 1.9rem;
+}
+.card2-div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  perspective: 100rem;
+  position: relative;
+  gap: 3rem;
+}
+
+.card2 {
+  width: 12%;
+  height: 165px;
+  color: white;
+  background-color: #0b0c10 !important;
+  display: grid;
+  position: relative;
+  place-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  background: white;
+  border-radius: 5px;
+  color: white;
+  box-shadow: 0px 0px 10px 1px rgba(255, 255, 255, 0.6);
+}
+.card2__side {
+  height: 100%;
+  width: 100%;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 700ms ease;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.card2__side--back {
+  transform: rotateY(180deg);
+  padding: 0rem 1rem;
+  color: white;
+  font-weight: normal;
+}
+.card2:hover .card2__side--front {
+  transform: rotateY(-180deg);
+}
+
+.card2:hover .card2__side--back {
+  transform: rotateY(0);
+}
+.card2 img {
+  max-width: 100%;
+  object-fit: contain;
+}
+.card2__side--front p {
+  position: absolute;
+  left: 4%;
+  bottom: 4%;
+  color: white;
+  margin: 0;
+  font-weight: normal;
+}
+.center-pet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  color: white;
+}
+.mint {
+  padding: 6px 60px;
+  font-size: 1.7rem;
+  background: #02bf76;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  margin-top: 2rem;
+  transition: all 0.25s ease-in-out;
+}
+.mint:hover {
+  transform: scale(0.9);
+  background-color: white;
+  color: #02bf76;
+  font-weight: bold;
+}
+.center-pet p {
+  font-size: 1.3rem;
+}
+@media screen and (max-width: 1169px) {
+  .pets {
+    width: 80%;
+  }
+  .card2 {
+    width: 20%;
+  }
+  .card2-div {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 847px) {
+  .card2-div {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+  }
+  .card2 {
+    width: 120px;
+    height: 140px;
+  }
+  .pets h1 {
+    font-size: 2rem;
+  }
+  .desc-pets {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 662px) {
+  .pets {
+    width: 95%;
+  }
+}

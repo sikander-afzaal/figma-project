@@ -1,0 +1,86 @@
+.lottery {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem 0rem;
+  position: relative;
+  width: 80%;
+  gap: 3rem;
+}
+.lottery::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  bottom: -2%;
+}
+.lottery h1 {
+  font-size: 2.5rem;
+  color: white;
+  font-weight: bold;
+}
+.div-lot2::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  top: 0;
+  left: 0;
+}
+.div-lot1,
+.div-lot2 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  gap: 1rem;
+  position: relative;
+}
+.div-lot1 img,
+.div-lot1 h1,
+.div-lot2 img,
+.div-lot2 h1 {
+  flex: 0.5;
+}
+.div-lot2 {
+  padding: 2rem 0rem;
+}
+.div-lot2 h1 {
+  order: 2;
+}
+.lottery img {
+  max-width: 50%;
+  object-fit: contain;
+}
+@media screen and (max-width: 1053px) {
+  .lottery {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 662px) {
+  .lottery {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 539px) {
+  .lottery h1 {
+    font-size: 1.8rem;
+  }
+  .div-lot1,
+  .div-lot2 {
+    flex-direction: column;
+    align-items: center;
+  }
+  .lottery img {
+    max-width: 100%;
+  }
+  .div-lot2 h1 {
+    order: 1;
+  }
+  .div-lot2 img {
+    order: 2;
+  }
+}

@@ -5,6 +5,7 @@ import img2 from "../../Assets/baby (2).gif";
 import img3 from "../../Assets/baby (3).gif";
 import img4 from "../../Assets/baby (4).gif";
 import img5 from "../../Assets/baby (5).gif";
+import mask from "../../Assets/metamask.png";
 function Club() {
   return (
     <div className="club">
@@ -12,7 +13,7 @@ function Club() {
       <div className="club_img-div">
         <div className="image-box">
           <img src={img} alt="" />
-          <p>unique pets</p>
+          <p>Unique pets</p>
         </div>
         <div className="image-box">
           <img src={img2} alt="" />
@@ -20,7 +21,7 @@ function Club() {
         </div>
         <div className="image-box">
           <img src={img3} alt="" />
-          <p>community wallet gives you additional benefits</p>
+          <p>Community wallet gives you additional benefits</p>
         </div>
         <div className="image-box">
           <img src={img4} alt="" />
@@ -31,13 +32,21 @@ function Club() {
           <p>Additional Benefits through roadmap activations</p>
         </div>
       </div>
-      <h1>Owning a mystical pet is extremely easy</h1>
-      <p>
-        Get your metamask wallet set up which is needed for minting. All you
-        need to do is have 0.0555 ETH+GAS, be connected to the mainnet and
-        you're ready to go.
-      </p>
-      <button className="mask">Get MetaMask</button>
+
+      <div className="mask-div">
+        <div className="left-mask">
+          <h1>Owning a mystical pet is extremely easy</h1>
+          <p>
+            Get your metamask wallet set up which is needed for minting. All you
+            need to do is have 0.0555 ETH+GAS, be connected to the mainnet and
+            you're ready to go.
+          </p>
+        </div>
+        <div className="right-mask">
+          <img src={mask} alt="..." className="meta" />
+          <button className="mask">Get MetaMask</button>
+        </div>
+      </div>
     </div>
   );
 }

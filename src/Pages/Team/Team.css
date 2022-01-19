@@ -1,0 +1,129 @@
+.team {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 80%;
+  padding: 3rem 0rem;
+  gap: 2rem;
+  position: relative;
+  margin-bottom: 2rem;
+}
+.team::after {
+  content: "";
+  position: absolute;
+  width: 110%;
+  height: 2px;
+  background-color: white !important;
+  bottom: -2%;
+  left: -5%;
+}
+.team h1 {
+  color: white;
+  font-size: 2.5rem;
+}
+.profile-div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+}
+.left-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-direction: column;
+}
+.pic {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background-color: #c4c4c4;
+}
+.name {
+  color: white;
+  font-size: 1.3rem;
+  text-align: center;
+}
+.right-profile {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+}
+.right-profile p {
+  font-size: 1.8rem;
+  color: white;
+}
+.small-box-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.small-box {
+  width: 40px;
+  height: 44px;
+  background-color: #c4c4c4;
+}
+.social-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+/* accordian styling ---------------------- */
+.accordion {
+  width: 100% !important;
+  margin: auto !important;
+}
+.accordion-item {
+  border: 1px solid white !important;
+}
+.accordion-button {
+  background: #0b0c10 !important;
+  color: white !important;
+  font-size: 1.2rem !important;
+}
+.accordion-button::after {
+  background: none !important;
+  content: "\203A" !important;
+  font-size: 2rem !important;
+  margin-left: auto !important;
+  margin-right: 20px !important;
+  height: auto !important;
+  width: auto !important;
+  transform: rotate(90deg) !important;
+}
+.accordion-button:not(.collapsed)::after {
+  transform: rotate(270deg) !important;
+}
+.accordion-body {
+  background: #0b0c10 !important;
+  color: white !important;
+  font-size: 1.1rem !important;
+}
+.accordion-button:focus {
+  border-color: none !important;
+  box-shadow: none !important;
+  outline: 0 !important ;
+  z-index: 3;
+}
+@media screen and (max-width: 727px) {
+  .team {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .profile-div {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+  }
+  .right-profile {
+    align-items: center;
+  }
+}
